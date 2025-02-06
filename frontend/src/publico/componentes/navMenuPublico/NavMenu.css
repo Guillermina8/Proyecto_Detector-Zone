@@ -1,0 +1,62 @@
+/* Menú solo enlaces */
+.menu {
+    display: flex;
+    gap: 20px;
+    background-color: #BCAA92;
+    margin-left: 2cm;  /* Mueve el menú hacia la derecha */
+    position: relative;  /* Habilita el movimiento relativo */
+    top: 0.5cm;  /* Mueve el menú hacia abajo */
+    align-items: center; /* Asegura que los elementos se alineen verticalmente */
+    height: auto;  /* Asegura que el menú tenga la altura necesaria */
+    margin-bottom: 3px;
+}
+
+/* Items */
+.menu-item {
+    color: #656257;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
+    padding: 8px 16px;  /* Padding adecuado para botones rectangulares */
+    display: inline-flex;  /* Centra el texto dentro del botón */
+    justify-content: center;  /* Centra el texto horizontalmente */
+    align-items: center;  /* Centra el texto verticalmente */
+    border-radius: 4px;  /* Bordes redondeados */
+    white-space: nowrap;  /* Evita que el texto se envuelva */
+    margin-bottom: 1px;
+}
+
+/* Hover */
+.menu-item:hover {
+    text-decoration: underline;
+}
+
+/* Botones grandes */
+.menu-item.btn-large {
+    background-color: #2897b3;
+    padding: 8px 16px;  /* Ajusta el padding para un tamaño adecuado */
+    font-size: 16px;    /* Ajusta el tamaño de la fuente */
+    line-height: normal;   /* Asegura que el texto se centre bien */
+    display: inline-flex;  /* Centra el texto dentro del botón */
+    justify-content: center;  /* Centra el texto horizontalmente */
+    align-items: center;  /* Centra el texto verticalmente */
+}
+
+/* Hover para botones grandes */
+.menu-item.btn-large:hover {
+    background-color: #C7DA7E;
+}
+
+/* Enlaces */
+.navbar-menu a {
+    text-decoration: none;
+    color: #656257; /* Marrón Oscuro */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.links {
+    display: flex;
+    gap: 10px;
+    margin-top: 1.5cm;  /* Mueve los enlaces hacia abajo */
+}

@@ -1,0 +1,40 @@
+.dashboard-footer {
+    background-color: #BCAA92 !important;
+    display: flex;
+    justify-content: space-between; /* Distribuye uniformemente */
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    min-height: 60px; /* Evita que se colapse */
+}
+.footer-left p {
+    margin: 10;
+}
+.footer-center {
+    display: flex;
+    gap: 20px;
+}
+.footer-center {
+    display: flex;
+     justify-content: flex-end;
+    gap: 15px;
+    margin-left: 10px;
+   
+}
+.footer-right {
+    display: flex;
+    justify-content: flex-end; /*Centrar iconos*/
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-right: 40px; 
+} 
+.social-icon {
+    font-size: 24px; /* Tamaño de los iconos */
+    color: white; /* Color inicial */
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #F0C954 ; /* Cambia de color al pasar el mouse */
+}

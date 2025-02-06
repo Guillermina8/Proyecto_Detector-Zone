@@ -1,0 +1,59 @@
+/* Left section */
+.left-section {
+    width: 50%;
+    margin-top: 0;  /* Evita márgenes negativos */
+    padding-top: 20px;  /* Si necesitas espacio adicional */
+}
+
+/* Body text */
+.body-text {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Button group */
+.button-group {
+    margin-top: 2.5rem;
+    margin-left: 20px;
+}
+
+/* Left section paragraph */
+.left-section p {
+    margin-top: 10px;
+}
+
+/* Right section */
+.right-section {
+    display: flex;
+    justify-content: flex-end;  /* Mantiene la imagen a la derecha */
+    align-items: center;        /* Centra la imagen verticalmente */
+    height: 60vh;              /* Ajusta la altura del contenedor */
+    flex: 1;                    /* Flex adicional */
+}
+
+/* Left section h1 */
+.left-section h1 {
+    font-size: 3.2rem;
+    margin-top: 0;  /* Elimina el margen negativo */
+}
+
+/* Container */
+.container {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; 
+    height: 50vh;  /* Ajusta según lo necesites */
+}
+
+/* Dashboard image */
+.dashboard-img {
+    max-width: 90%;  /* Ajusta el tamaño sin desbordar */
+    height: auto;    /* Mantiene la proporción */
+    position: relative;
+    top: -50px;      /* Ajusta el valor según lo necesario */
+}
+
+/* Left section list items */
+.left-section ul li {
+    margin-bottom: 15px;
+}

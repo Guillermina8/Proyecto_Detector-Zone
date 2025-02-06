@@ -1,0 +1,17 @@
+/* Header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: white;
+    background-color: #BCAA92;
+}
+
+.logo-img {
+    max-width: 100px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Hace que la imagen sea completamente redonda */
+    object-fit: cover; /* Asegura que la imagen se recorte correctamente dentro del círculo */
+}
