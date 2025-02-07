@@ -4,7 +4,6 @@ const UsuarioViewModel = require('../viewmodels/usuarioViewModel');
 // Exporto la función req son los datos que se reciben del user y res es la respusta del front confirma o indica error. 
 module.exports.registro = (req, res) => {
     const { nombre, telefono, email, password } = req.body;
-
     // Validación de campos obligatorios
     if (!nombre || !email || !password) {
         return res.status(400).json({

@@ -14,8 +14,7 @@ const NavMenu = () => {
         localStorage.removeItem("username"); // Eliminar usuario del localStorage
         setIsLoggedIn(false); // Actualizar estado
         navigate("/"); // Redirigir al inicio
-    };
-   
+    };   
    
     return (
         <nav className="menu">

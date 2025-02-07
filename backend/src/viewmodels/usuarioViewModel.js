@@ -1,21 +1,36 @@
 const UsuarioModel = require('../models/usuarioModel');
-const bcrypt = require('bcrypt');
 
 const UsuarioViewModel = {
-    registrarUsuario: async (data, callback) => {
-        try {
-            const passwordEncriptado = await bcrypt.hash(data.password, 10);                                                // Hashear la contraseña
 
+    registrarUsuario: (data, callback) => {
+        try {
             UsuarioModel.crearUsuario(
                 {
                     nombre: data.nombre, telefono: data.telefono, email: data.email,
-                    password: passwordEncriptado, fecha_registro: data.fecha_registro,
+                    password: data.password, fecha_registro: data.fecha_registro,
                     rol: data.rol_default
                 }, callback);
         } catch (error) {
             return callback(error);
         }
-    }
-};
+    },
+
+    loginUsuario: (data, callback) => {
+        UsuarioModel.loginUsuario(data.email, data.password, (error, result) => {
+            console.log('result', result);    
+            if (error) {
+                    return callback(error);
+                }
+                if (result.length === 0) {
+                    return callback(null, { error: "Usuario no encontrado" });
+                }
+
+                if (data.password !== result[0].pwd_user){
+                    return callback(null, { error: "Contraseña incorrecta" });
+                } 
+
+            callback(null, { message: "Inicio de sesión exitoso", result: result[0] });
+        });
+}};
 
 module.exports = UsuarioViewModel;

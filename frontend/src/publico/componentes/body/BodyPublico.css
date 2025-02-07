@@ -1,8 +1,16 @@
+body {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
 /* Left section */
 .left-section {
-    width: 50%;
-    margin-top: 0;  /* Evita márgenes negativos */
-    padding-top: 20px;  /* Si necesitas espacio adicional */
+    width: 80%;
+    margin-top: 0;
+    padding-top: 0;  
+    position: relative;
+    top: -100px;
 }
 
 /* Body text */
@@ -19,7 +27,7 @@
 
 /* Left section paragraph */
 .left-section p {
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 /* Right section */
@@ -29,6 +37,7 @@
     align-items: center;        /* Centra la imagen verticalmente */
     height: 60vh;              /* Ajusta la altura del contenedor */
     flex: 1;                    /* Flex adicional */
+    margin-bottom: 100px ;
 }
 
 /* Left section h1 */
@@ -42,7 +51,9 @@
     display: flex;
     align-items: center; /* Centra verticalmente los elementos */
     justify-content: space-between; 
-    height: 50vh;  /* Ajusta según lo necesites */
+    height: auto;  /* Ajusta según lo necesites */
+    position: relative;
+    top: -140px;
 }
 
 /* Dashboard image */
@@ -50,7 +61,7 @@
     max-width: 90%;  /* Ajusta el tamaño sin desbordar */
     height: auto;    /* Mantiene la proporción */
     position: relative;
-    top: -50px;      /* Ajusta el valor según lo necesario */
+    top: -60px;      /* Ajusta el valor según lo necesario */
 }
 
 /* Left section list items */

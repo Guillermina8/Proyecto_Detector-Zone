@@ -5,15 +5,15 @@ import Footer from "../footerPublico/Footer";
 import HeaderSinNavBar from "../headerSinNavBar/HeaderSinNavBar";
 
 function Registro() {
-    const [error, setError] = useState("");                                                     // Estado para errores
+    const [error, setError] = useState("");                                                              // Estado para errores
     const [showPassword, setShowPassword] = useState(false);                                        // Estado para mostrar/ocultar contraseña
-    const navigate = useNavigate();                                                             // Inicializa useNavigate
+    const navigate = useNavigate();                                                                      // Inicializa useNavigate
 
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
-        const username = formData.get("username");
+        const nombre = formData.get("username");
         const telefono = formData.get("telefono");
         const email = formData.get("email");
         const password = formData.get("password");
@@ -25,7 +25,7 @@ function Registro() {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ username, telefono, email, password }),
+            body: JSON.stringify({ nombre, telefono, email, password }),
         })
             .then(async (response) => {
                 const data = await response.json();
@@ -34,7 +34,7 @@ function Registro() {
                     throw new Error(data.message);
                 }
                 console.log("Usuario registrado:", data);
-                setError("");                                                                // Borra cualquier error previo
+                setError("");                                                                                            // Borra cualquier error previo
                 navigate("/login");                                                                                 // Redirijo a login
 
             })

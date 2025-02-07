@@ -14,8 +14,8 @@ function BodyPublico() {
     <>
         <div className="left-section">
             <h1> Bienvenido a <span className="platform-name">Detector Zone</span> </h1>
-            <p>Descubre una comunidad donde la innovación, la creatividad y las mejores experiencias te esperan.</p>
-
+            <p>Descubre una comunidad donde la innovación, la creatividad y las mejores
+             experiencias te esperan.</p>
             <h2> ¿Qué te ofrecemos?</h2>
             <ul>
                 <li>✅ Acceso a contenido exclusivo.</li>
@@ -23,8 +23,8 @@ function BodyPublico() {
                 <li>✅ Descubre productos y servicios diseñados para ti.</li>
                 <li>✅ Sé parte de una experiencia interactiva en tiempo real.</li>
             </ul>
-
-            <p className="highlight-text">🔐 <strong>Regístrate ahora</strong> y empieza a disfrutar de todas las ventajas que tenemos para ti.</p>
+            <p className="highlight-text">🔐 <strong>Regístrate ahora</strong> y empieza
+             a disfrutar de todas las ventajas que tenemos para ti.</p>
             <div className="button-group">
                 <button className="btn-join" onClick={redirectToRegistro}>Únete</button>
                 <button className="btn-info">Más Información</button>
@@ -36,7 +36,6 @@ function BodyPublico() {
         </div>
         </div>
     </>
-);
-}
+);}
 
 export default BodyPublico;

@@ -1,19 +1,19 @@
 /* Menú solo enlaces */
 .menu {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     background-color: #BCAA92;
-    margin-left: 2cm;  /* Mueve el menú hacia la derecha */
+    margin-left: 2px;  /* Mueve el menú hacia la derecha */
     position: relative;  /* Habilita el movimiento relativo */
-    top: 0.5cm;  /* Mueve el menú hacia abajo */
+    top: 0cm;  /* Mueve el menú hacia abajo */
     align-items: center; /* Asegura que los elementos se alineen verticalmente */
-    height: auto;  /* Asegura que el menú tenga la altura necesaria */
+    height: 5px;  /* Asegura que el menú tenga la altura necesaria */
     margin-bottom: 3px;
 }
 
 /* Items */
 .menu-item {
-    color: #656257;
+    color: #655757;
     text-decoration: none;
     font-weight: bold;
     margin: 10px;
@@ -24,6 +24,7 @@
     border-radius: 4px;  /* Bordes redondeados */
     white-space: nowrap;  /* Evita que el texto se envuelva */
     margin-bottom: 1px;
+    margin-left: 2px;
 }
 
 /* Hover */

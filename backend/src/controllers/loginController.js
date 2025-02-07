@@ -1,28 +1,34 @@
-// Importación de la conexión a BBDD
-const conexionDB = require('../config/conexionDB');
+const UsuarioViewModel = require('../viewmodels/usuarioViewModel');
+
 // Exporto la Función  para el inicio de sesión 
 module.exports.login = (req, res) => {
 
     const { email, password } = req.body;
-    const query = `SELECT * FROM usuarios WHERE mail_user = '${email}' AND pwd_user = '${password}'`;
+
+    if (!email || !password) {
+        return res.status(400).json(
+            { error: "Email y contraseña son obligatorios" }
+        );
+    }
     
-
     try {
-        conexionDB.query(query, (err, rows) => {
-            if (err) {
+        UsuarioViewModel.loginUsuario({ email, password }, (error, result) => {   // Llamo a la función de inicio de sesión
+            
+            if (error) {
                 return res.status(500).json({
-                    message: 'Error interno con el servidor',
-                    error: err
+                    message: 'Error al iniciar sesión: ' + error,
+                    error: error
                 });
-            }
+            }       
 
-            if (rows.length === 0) {
+            if (result.error) {
                 return res.status(401).json({
-                    message: 'Error: Usuario o contraseña incorrectos'
+                    message: error
                 });
-            }
-            res.status(200).json(rows);  // Envía la respuesta en caso de éxito
-            res.body = rows;   
+            } 
+            
+            res.status(200).json(result);  // Envía la respuesta en caso de éxito
+            res.body = result;  
         });
     } catch (error) {
         res.status(500).json({
