@@ -1,12 +1,8 @@
 import React from "react";
-import "./homePrivado.css";
-
-
 import Header from "../header/Header.jsx";
 import Footer from "../footerPublico/Footer.jsx";
 
 function Nosotros() {
-
 
     return (
         <div className="dashboard-container">
