@@ -16,8 +16,11 @@ const UsuarioViewModel = {
     },
 
     loginUsuario: (data, callback) => {
+
         UsuarioModel.loginUsuario(data.email, data.password, (error, result) => {
-            console.log('result', result);    
+
+            console.log('result', result);  
+              
             if (error) {
                     return callback(error);
                 }

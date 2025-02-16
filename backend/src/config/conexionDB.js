@@ -1,11 +1,11 @@
-// Importo el módulo mysql2                                                una versión mejorada del paquete original mysql para Node.js
+// Importo el módulo mysql2                                                                                                                                 una versión mejorada del paquete original mysql para Node.js
 const mysql = require('mysql2');
 
 
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'MySQL',                                                       //Si este código va a producción,utilizaría una variables de entorno .env
+    password: 'MySQL',                                                                                                                                        //Si este código va a producción,utilizaría una variables de entorno .env
     database: 'detector_zone'
 });
 

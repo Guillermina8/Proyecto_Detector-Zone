@@ -1,0 +1,11 @@
+.dashboard-body-1{
+    display: flex;
+    -ms-flex-item-align:baseline ;
+    margin-left:5%;
+    padding: 2%;
+
+}
+.imagen1{
+   -ms-flex-align: center;
+   margin: auto;
+}

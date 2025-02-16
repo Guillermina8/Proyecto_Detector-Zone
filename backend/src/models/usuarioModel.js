@@ -14,6 +14,7 @@ const UsuarioModel = {
     },
 
     loginUsuario: (email, password, callback) => {
+        
         // Consulta SQL parametrizada (evita inyecciones SQL)
         const query = `SELECT * FROM usuarios WHERE mail_user = ? AND pwd_user = ?`;
 

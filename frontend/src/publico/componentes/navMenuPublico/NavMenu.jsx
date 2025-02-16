@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const NavMenu = () => {
+    
     const navigate = useNavigate(); // Para redirigir después del logout
     const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("username") ? true : false);
     // const isLoggedIn = !localStorage.getItem("username"); // Verifica si hay un usuario logueado

@@ -5,15 +5,20 @@ import Footer from "../footerPublico/Footer";
 import HeaderSinNavBar from "../headerSinNavBar/HeaderSinNavBar";
 
 const Login = () => {
+
   const [error, setError] = useState("");                                               //  useState Para gestionar estados locales
-  const [showPassword, setShowPassword] = useState(false);                              // Estado para mostrar/ocultar contraseña
-  const navigate = useNavigate();                                                         //useNavigate: Para redirigir a otras páginas después de iniciar sesión
+  const [mostrarContrasenya, setMostrarContrasenya] = useState(false);                              // Estado para mostrar/ocultar contraseña
+  const navigate = useNavigate();          //useNavigate: Para redirigir a otras páginas después de iniciar sesión
+
+
   const handleSubmit = (e) => {
+
     e.preventDefault();
     const formData = new FormData(e.target);
     const email = formData.get("email");
     const password = formData.get("password");                                             //Para mostrar y ocultar la contraseña.
     const API_URL = "http://localhost:3000"; 
+    
     fetch(`${API_URL}/login`, {
       method: "POST",
       headers: {
@@ -22,10 +27,13 @@ const Login = () => {
       body: JSON.stringify({ email, password }),
     })
       .then(async (response) => {
+
         const data = await response.json();
+
         if (!response.ok) {
           throw new Error(data.message);
         }
+
         localStorage.setItem("username", data.mail_user);
         setError("");
         navigate("/home");
@@ -35,13 +43,15 @@ const Login = () => {
         setError(error.message);
       });
   };
+
   const redirectToRegistro = () => {
     navigate("/registro");
   };
   // Función para alternar visibilidad de la contraseña
-  const togglePasswordVisibility = () => {
-    setShowPassword((prev) => !prev);
+  const contrasenyaVisible = () => {
+    setMostrarContrasenya((valor) => !valor);
   };
+  
   return (
     <>
       <HeaderSinNavBar />
@@ -58,14 +68,14 @@ const Login = () => {
               <label htmlFor="password">Contraseña</label>
               <div >
                 <input
-                  type={showPassword ? "text" : "password"}
+                  type={mostrarContrasenya ? "text" : "password"}
                   id="password"
                   name="password"
                   placeholder="Introduce tu contraseña"
                   required
                 />
-                <span className="eye-icon" onClick={togglePasswordVisibility}>
-                  {showPassword ? "👁️" : "🔒"}
+                <span className="eye-icon" onClick={contrasenyaVisible}>
+                  {mostrarContrasenya ? "👁️" : "🔒"}
                 </span>
               </div>
             </div>

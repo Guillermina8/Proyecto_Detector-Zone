@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";  // Importamos el hook useNavigate
-import imagen from "../../../assets/images/detector_atardecer_Hombre1.png";
+import imagen from "../../../assets/images/detector_man.png";
 import "./BodyPublico.css";
 
 function BodyPublico() {
@@ -26,7 +26,7 @@ function BodyPublico() {
             <p className="highlight-text">🔐 <strong>Regístrate ahora</strong> y empieza
              a disfrutar de todas las ventajas que tenemos para ti.</p>
             <div className="button-group">
-                <button className="btn-join" onClick={redirectToRegistro}>Únete</button>
+                <button className="btn-green" onClick={redirectToRegistro}>Únete</button>
                 <button className="btn-info">Más Información</button>
             </div>
         </div>

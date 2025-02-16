@@ -6,20 +6,33 @@
     color: #333;
     text-align: center;
 }
+form {
+    background-color: #C7DA7E;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 10%;
+    margin-bottom: 10%; 
 
+}
+ input{
+    background-color: #f2e8db ;
+ }
 .contenedor {
-   background-color: #fff;
+   background-color: #C7DA7E;
+   border-radius: 8px;
+   border: 4px solid #C7DA7E; 
+   box-shadow: 0 0 15px rgba(0, 128, 0, 0.7); 
    display: flex;
    justify-content: center;  
    align-items: center;      
    max-width: 30%;
-   margin-top: 10%;
+   margin-top: 5%;
    margin-left: 35%;
    margin-right: 25%;
    max-height: 60%;
    padding-bottom: 1rem;
    padding-left: 1rem;
-   padding-right: 3rem;
+   padding-right: 2rem;
 }
 
 .options {
@@ -37,7 +50,7 @@
     font-size: 1rem;
     font-weight: bold;
     color: #fff;
-    background-color: #007bff;
+    background-color: #17a2b8;;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -63,7 +76,7 @@
 .register-button {
     background: none;
     border: none;
-    color: #007BFF;
+    color: #17a2b8;;
     cursor: pointer;
     font-size: 0.9rem;
 }

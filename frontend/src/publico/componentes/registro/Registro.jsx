@@ -5,13 +5,14 @@ import Footer from "../footerPublico/Footer";
 import HeaderSinNavBar from "../headerSinNavBar/HeaderSinNavBar";
 
 function Registro() {
+
     const [error, setError] = useState("");                                                              // Estado para errores
-    const [showPassword, setShowPassword] = useState(false);                                        // Estado para mostrar/ocultar contraseña
+    const [mostrarContrasenya, setMostrarContrasenya] = useState(false);                                        // Estado para mostrar/ocultar contraseña
     const navigate = useNavigate();                                                                      // Inicializa useNavigate
 
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault();  // Evita que se recargue la página
         const formData = new FormData(e.target);
         const nombre = formData.get("username");
         const telefono = formData.get("telefono");
@@ -28,6 +29,7 @@ function Registro() {
             body: JSON.stringify({ nombre, telefono, email, password }),
         })
             .then(async (response) => {
+
                 const data = await response.json();
                 if (!response.ok) {
                     console.error("Error en la petición:", data.message);
@@ -37,6 +39,7 @@ function Registro() {
                 setError("");                                                                                            // Borra cualquier error previo
                 navigate("/login");                                                                                 // Redirijo a login
 
+            
             })
             .catch((error) => {
                 console.error("Error en la petición", error);
@@ -49,8 +52,8 @@ function Registro() {
         navigate("/login");
     };
     // Función para alternar visibilidad de la contraseña
-    const togglePasswordVisibility = () => {
-        setShowPassword((prev) => !prev);
+    const contrasenyaVisible = () => {
+        setMostrarContrasenya((valor) => !valor);
     };
     return (
         <>
@@ -94,14 +97,14 @@ function Registro() {
                         <label htmlFor="password">Contraseña</label>
                         <div >
                             <input
-                                type={showPassword ? "text" : "password"}
+                                type={mostrarContrasenya ? "text" : "password"}
                                 id="password"
                                 name="password"
                                 placeholder="Introduce tu contraseña"
                                 required
                             />
-                            <span className="eye-icon" onClick={togglePasswordVisibility}>
-                                {showPassword ? "👁️" : "🔒"}
+                            <span className="eye-icon" onClick={contrasenyaVisible}>
+                                {mostrarContrasenya ? "👁️" : "🔒"}
                             </span>
                         </div>
                     </div>
